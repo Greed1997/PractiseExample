@@ -9,21 +9,14 @@ import UIKit
 
 class OneViewController: UITabBarController {
 
+    @IBOutlet var someLabel: UILabel!
+    var someInt: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .white
+//        print(type(of: someLabel?.text))
+//        print(type(of: String(someInt)))
+        someLabel?.text = String(someInt) // Почему не работает? Как исправить?
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
